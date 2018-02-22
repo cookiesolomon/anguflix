@@ -1,0 +1,15 @@
+*{
+  background-color: black;
+
+}
+ input {
+   background-color: antiquewhite;
+ }
+
+ select, option {
+  background-color: antiquewhite;
+ }
+
+ h2{
+   color: white;
+ }

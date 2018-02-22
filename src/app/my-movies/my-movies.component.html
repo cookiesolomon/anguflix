@@ -1,0 +1,15 @@
+<a routerLink="/">Homepage</a>
+<app-search-header></app-search-header>
+<p>Total Price: ${{this.budget}}</p>
+<h2>My Movies</h2>
+<div class="container">
+  <div class="row">
+    <div *ngIf="myMovies.length === 0"><p>Select movies to add to your collection</p>
+    </div>
+
+    <div class="col-md-4 list card" *ngFor="let movie of myMovies; let i = index">
+        <app-movie [movie]="movie" (movieButtonClick)="removeMovie($event)" btnText="remove"></app-movie>
+
+    </div>
+  </div>
+</div>

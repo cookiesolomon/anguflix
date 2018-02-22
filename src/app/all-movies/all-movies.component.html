@@ -1,0 +1,19 @@
+<a routerLink="/my-movies">My Movies</a>
+<app-search-header></app-search-header>
+<p class="budget">
+  {{this.user.name}} Total Price: ${{this.user.budget}}</p>
+<h2>All Movies</h2>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4 list card" *ngFor="let movie of allMovies; let i = index">
+      <app-movie [movie]="movie" (imgButtonClick)="viewMovie($event)" (movieButtonClick)="addMovie($event)" btnText="Add"></app-movie>
+      <!-- <div>
+        <div class="card-title">{{movie.title}}-{{movie.year}} </div>{{movie.price | currency}}
+        <img class="card-img-top" (click)="addMovie(this.movie)" (click)="viewMovie(this.movie)" routerLink="/movie"src="{{movie.imgUrl}}">
+        <p class="card-text"> {{movie.shortDescription}}</p>
+      </div> -->
+
+    </div>
+  </div>
+</div>

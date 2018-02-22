@@ -1,0 +1,10 @@
+<!-- <div>{{movie.title}}
+    <img (click)="addMovie(this.movie)" src="{{movie.img}}">{{movie.descrShort}}
+  </div> -->
+  <img (click)='imgClick()' routerLink='/movie'src='{{movie.imgUrl}}' />
+  <h5>{{movie.price | currency}}</h5>
+  <h4>{{movie.title}}, {{movie.year}}</h4>
+  <p>{{movie.shortDescription}}</p>
+  <br/>
+  <button class='add-remove btn btn-info' (click)='clickFunc()'>{{ btnText }}</button>
+  <br/>
